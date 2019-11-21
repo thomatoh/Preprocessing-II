@@ -1,35 +1,56 @@
 .home {
+  padding: @mobile-padding;
+  @media @desktop {
+    padding: 0; 
+  }
+
+  .content-welcome {
+    margin: 0 auto;
+    border-bottom: @dashed-silver;
+
+    h2 {
+      margin: @small 0 0 0;
+    }
+  }
 
   .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    .flex(column);
 
-   
+    @media @desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: @small 0 0 0;
+    }
     
     .text-content {
-      width: 48%;
-      padding-right: 1%;
+      margin: @small 0 0 0;
+      @media @desktop {
+        .desktop-text-content;
+      }
     }
 
     .img-content {
-      width: 48%;
-      padding-left: 1%;
-
       img {
-        border-radius: 10px;
-      }
+        border-radius: 1rem;
+        width: 100%;
+      } 
     }
   }
 
   .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    padding-bottom: @medium;
+    border-bottom: @dashed-silver;
+    .flex(column-reverse);
+    @media @desktop {
+      flex-direction: row;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @desktop {
+        .desktop-text-content;
+      }
     }
 
     .img-content {
@@ -39,23 +60,34 @@
   }
 
   .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
-
+    margin: @small auto;
+    @media @desktop {
+      padding: 0 10%;
+    }
     img {
-      border-radius: 10px;
+      border-radius: 1rem;
+      width: 100%;
     }
   }
 
   .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    padding: @medium;
+    border-top: @dashed-silver;
+    .flex(column);
+    @media @desktop {
+      flex-direction: row;
+    }
 
     .destination {
-      width: 30%;
-      margin-bottom: 30px;
+      margin-bottom: @medium;
+      @media @desktop {
+        padding: 0 2.5%;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      .button;
     }
   }
 }// home

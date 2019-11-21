@@ -1,1 +1,28 @@
 // Navigation Styles here
+
+header {
+    .flex(column);
+    align-items: center;
+    border-bottom: @dashed-silver;
+
+    @media @desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    h1 {
+        margin: @small 0;
+    }
+
+    nav {
+        .flex();
+        justify-content: space-around;
+        width: 100%;
+        color: black;
+
+        @media @desktop {
+            width: 50%;
+            
+        }
+    }
+}
