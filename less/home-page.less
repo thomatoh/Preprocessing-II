@@ -15,7 +15,7 @@
 
   .content-section {
     .flex(column);
-
+    .slide-animation(@right);
     @media @desktop {
       flex-direction: row;
       justify-content: space-between;
@@ -41,6 +41,7 @@
     padding-bottom: @medium;
     border-bottom: @dashed-silver;
     .flex(column-reverse);
+    .slide-animation(@left);
     @media @desktop {
       flex-direction: row;
     }

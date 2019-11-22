@@ -19,10 +19,24 @@ header {
         justify-content: space-around;
         width: 100%;
         color: black;
-
+        a:first-child:hover {
+            .shake-animation(red);
+        }
+        a:nth-child(2):hover {
+            .shake-animation(orange);
+        }
+        a:nth-child(3):hover {
+            .shake-animation(dodgerblue);
+        }
+        a:last-child:hover {
+            .shake-animation(green);
+        }
         @media @desktop {
             width: 50%;
             
         }
+
     }
+
+
 }

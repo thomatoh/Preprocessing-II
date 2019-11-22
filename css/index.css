@@ -11,6 +11,45 @@
   width: 45%;
   margin: 0;
 }
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes right-slide-in {
+  0% {
+    transform: translate(100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+@keyframes left-slide-in {
+  0% {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -208,6 +247,26 @@ header nav {
   width: 100%;
   color: black;
 }
+header nav a:first-child:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  color: red;
+}
+header nav a:nth-child(2):hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  color: orange;
+}
+header nav a:nth-child(3):hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  color: dodgerblue;
+}
+header nav a:last-child:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  color: green;
+}
 @media (min-width: 800px) {
   header nav {
     width: 50%;
@@ -242,6 +301,7 @@ header nav {
 .home .content-section {
   display: flex;
   flex-direction: column;
+  animation: right-slide-in 2s;
 }
 @media (min-width: 800px) {
   .home .content-section {
@@ -268,6 +328,7 @@ header nav {
   border-bottom: 0.2rem dashed #C0C0C0;
   display: flex;
   flex-direction: column-reverse;
+  animation: left-slide-in 2s;
 }
 @media (min-width: 800px) {
   .home .inverse-content {
