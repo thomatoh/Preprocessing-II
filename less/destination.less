@@ -1,10 +1,29 @@
 .destinations-images-section {
+
+    h1 {
+        padding: @small 0;
+    }
     .img-column-container {
         .flex(row);
         justify-content: space-between;
-
+        div:first-child {
+            display: none;
+            @media @desktop {
+               display: block;
+            }
+        }
+        div:last-child {
+            display: none;
+            @media @tablet {
+                display: block;
+            }
+        }
         .img-column {
-            width: 33%;
+            width: 100%;
+            @media @desktop {
+                width: 33%;
+            }
+
 
             img {
                 padding: .25rem .25rem;                
@@ -16,6 +35,7 @@
 .destination-form-section {
     h1 {
         border-bottom: @dashed-silver;
+        padding-top: @small;
         margin-bottom: @small;
     }
     form {
@@ -24,13 +44,17 @@
         @media @desktop {
             align-items: center;
         }
+
+        h3 {
+            margin: @small 0;
+        }
         div {
             padding: 0.5rem 0;
             .flex(row);
             justify-content: space-between;
             width: 100%;
             @media @desktop {
-                width: 50%;
+                width: 60%;
             }
         }
         input[type="submit"] {

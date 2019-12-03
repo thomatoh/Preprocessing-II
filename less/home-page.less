@@ -12,54 +12,71 @@
       margin: @small 0 0 0;
     }
   }
-
   .content-section {
-    .flex(column);
-    .slide-animation(@right);
-    @media @desktop {
-      flex-direction: row;
-      justify-content: space-between;
-      margin: @small 0 0 0;
-    }
-    
-    .text-content {
-      margin: @small 0 0 0;
-      @media @desktop {
-        .desktop-text-content;
-      }
-    }
-
-    .img-content {
-      img {
-        border-radius: 1rem;
-        width: 100%;
-      } 
-    }
-  }
-
-  .inverse-content {
-    padding-bottom: @medium;
     border-bottom: @dashed-silver;
-    .flex(column-reverse);
-    .slide-animation(@left);
-    @media @desktop {
-      flex-direction: row;
+    @media @tablet {
+      padding-top: @small;
+      .flex(row)
     }
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
+    @media @desktop {
+      display: block;
+    }
+    .content-div {
+      .flex(column);
+      .slide-animation(@right);
+      @media @tablet {
+        width: 50%;
+        padding: 0 @small;
+      }
       @media @desktop {
-        .desktop-text-content;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: @small 0 0 0;
+      }
+      
+      .text-content {
+        margin: @small 0 0 0;
+        @media @desktop {
+          .desktop-text-content;
+        }
+      }
+
+      .img-content {
+        img {
+          border-radius: 1rem;
+          width: 100%;
+        } 
       }
     }
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+
+    .inverse-content {
+      padding-bottom: @medium;
+      .flex(column-reverse);
+      .slide-animation(@left);
+      @media @tablet {
+        flex-direction: column;
+      }
+      @media @desktop {
+        flex-direction: row;
+      }
+
+      .text-content {
+        padding-left: 1%;
+        padding-right: 0;
+        @media @desktop {
+          .desktop-text-content;
+        }
+      }
+
+      .img-content {
+        padding-right: 1%;
+        padding-left: 0;
+      }
     }
   }
-
   .content-destination {
     margin: @small auto;
     @media @desktop {
