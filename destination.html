@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Fun Bus Travel Agency - Solution</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  
+     
+  <div class="container home">
+    <header>
+      <h1>Fun Bus</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+  <section class="destinations-images-section">
+    <div class="img-column-container">
+      <div class="img-column">
+        <img src="img/beach-5.jpeg">
+        <img src="img/beach-1.jpeg">
+      </div>
+      <div class="img-column">
+        <img src="img/beach-4.jpeg">
+        <img src="img/beach-3.jpeg">
+        <img src="img/beach-7.jpeg">
+      </div>
+      <div class="img-column">
+        <img src="img/beach-6.jpeg">
+        
+        <img src="img/beach-2.jpeg">
+      </div>
+    </div>
+  </section>
+  <section class="destination-form-section">
+    <div>
+      <h1>Fun in the Sun</h1>
+      <p>Bask into the sunlight with our exciting travel packages as we have the hottest beach resorts available for travel. Have a good time for a good price!</p>
+    </div>
+    <form>
+      <h3>Please fill in the following info to get started!</h3>
+      <div>
+        <span>Name of inquirer: </span>
+        <input type="text" name="name">
+      </div>
+      <div>
+        <span>Email of inquirer: </span>
+        <input type="email" name="email">
+      </div>
+      <div>
+        <span>Phone number of inquirer: </span>
+        <input type="text" name="number">
+      </div>
+      <div>
+        <span>Number of travelers: </span>
+        <input type="number" name="quantity" min="1" max="5">
+      </div>
+      <div>
+        <p>Start date</p>
+        <input type="date" id="start" name="trip-start"
+          value="2018-07-22"
+          min="2018-01-01" max="2018-12-31">
+      </div>
+      <div>
+        <p>End date</p>
+        <input type="date" id="start" name="trip-start"
+          value="2018-07-22"
+          min="2018-01-01" max="2018-12-31">
+      </div>
+      <input type="submit" class="button" value="Sign Me Up!">
+    </form>
+  </section>
+  </div><!-- container -->
+
+  <footer class="footer">
+    <p>Copyright Fun Bus 2018</p>
+  </footer>
+
+</body>
+</html>

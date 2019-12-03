@@ -202,11 +202,16 @@ h2 {
   font-size: 3.2rem;
   padding-bottom: 10px;
 }
+h3 {
+  font-size: 2.9rem;
+  padding-bottom: 10px;
+}
 h4 {
   font-size: 2.5rem;
   padding-bottom: 10px;
 }
-p {
+p,
+span {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
@@ -389,4 +394,44 @@ header nav a:last-child:hover {
   border-radius: 2rem;
   font-size: 2rem;
   font-weight: bold;
+}
+.destinations-images-section .img-column-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.destinations-images-section .img-column-container .img-column {
+  width: 33%;
+}
+.destinations-images-section .img-column-container .img-column img {
+  padding: 0.25rem 0.25rem;
+}
+.destination-form-section h1 {
+  border-bottom: 0.2rem dashed #C0C0C0;
+  margin-bottom: 2rem;
+}
+.destination-form-section form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  .destination-form-section form {
+    align-items: center;
+  }
+}
+.destination-form-section form div {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .destination-form-section form div {
+    width: 50%;
+  }
+}
+.destination-form-section form input[type="submit"] {
+  margin: 2rem 0;
 }
